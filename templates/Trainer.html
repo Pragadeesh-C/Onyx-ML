@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Input Form</title>
+</head>
+<body>
+    <h1>Machine Learning Input Form</h1>
+    <form action="/trainer" method="post">
+        <!-- Category (Dropdown) -->
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="2">Fit</option>
+            <option value="1">Loss</option>
+            <option value="0">Gain</option>
+        </select><br><br>
+
+        <!-- Sleep (Numeric Input, Integer, 1-4) -->
+        <label for="sleep">Sleep (hours):</label>
+        <input type="number" name="sleep" id="sleep" min="1" max="4" step="1"><br><br>
+
+        <!-- Recovery (Numeric Input, Integer, 1-5) -->
+        <label for="recovery">Recovery (days):</label>
+        <input type="number" name="recovery" id="recovery" min="1" max="5" step="1"><br><br>
+
+        <!-- Body (Radio Buttons) -->
+        <label>Body:</label>
+        <input type="radio" name="body" id="upper_body" value="1">
+        <label for="upper_body">Upper Body</label>
+        <input type="radio" name="body" id="lower_body" value="0">
+        <label for="lower_body">Lower Body</label><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Predict">
+    </form>
+    <h1>{{ text }}</h1>
+</body>
+</html>
