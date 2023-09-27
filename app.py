@@ -85,4 +85,3 @@ def trainer():
         return jsonify(predicted_list)
 
 
-app.run(debug=True,port=3000,host="192.168.101.18")
